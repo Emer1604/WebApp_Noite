@@ -1,0 +1,80 @@
+﻿<div class="row">
+    <div class="col-2">
+
+    </div>
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header">
+                <h2>Lista de Produtos</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-2">
+                        <a href="/Produto/Cadastrar" class="btn btn-success">Novo Produto</a>
+                    </div>
+                    <div class="col-4">
+                        <select name="filtro" class="form-control">
+                            <option value="0">Todas Opções</option>
+                            <option value="id">Por Código</option>
+                            <option value="nome">Por Nome</option>
+                            <option value="qtd">Por Quantidade</option>
+                        </select>
+                     </div>
+                     <div class="col-4">
+                         <input type="text" name="busca" class="form-control"/>
+                     </div>
+                     <div class="col-2">
+                         <button class="btn btn-primary">
+                             Pesquisar
+                         </button>
+                     </div>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>Quantidade em Estoque</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Caminhão Rodonaves</td>
+                            <td>150</td>
+                            <td>
+                                <a href="/Produto/Editar/1" class="btn btn-warning">Editar</a>
+                                <a href="/Produto/Excluir/1" class="btn btn-danger">Excluir</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Programa em C que calcula o segundo menor</td>
+                            <td>5</td>
+                            <td>
+                                <a href="/Produto/Editar/2" class="btn btn-warning">Editar</a>
+                                <a href="/Produto/Excluir/2" class="btn btn-danger">Excluir</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Boneco ET de Varginia</td>
+                            <td>87</td>
+                            <td>
+                                <a href="/Produto/Editar/3" class="btn btn-warning">Editar</a>
+                                <a href="/Produto/Excluir/3" class="btn btn-danger">Excluir</a>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-2">
+
+    </div>
+</div>
