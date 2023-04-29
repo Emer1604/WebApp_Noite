@@ -1,8 +1,6 @@
-﻿<div class="row">
-    <div class="col-2">
-
-    </div>
-    <div class="col-8">
+﻿@model List<WebApp_Noite.Models.ProdutoModel >
+<div class="row">
+    <div class="col-12">
         <div class="card">
             <div class="card-header">
                 <h2>Lista de Produtos</h2>
@@ -39,36 +37,52 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Caminhão Rodonaves</td>
-                            <td>150</td>
-                            <td>
-                                <a href="/Produto/Editar/1" class="btn btn-warning">Editar</a>
-                                <a href="/Produto/Excluir/1" class="btn btn-danger">Excluir</a>
-                            </td>
-                        </tr>
+                        @foreach (var produto in Model)
+                        {
+                            <tr>
+                                <td>@produto.Id</td>
+                                <td>@produto.Nome</td>
+                                <td>@produto.Quantidade</td>
+                                <td>
+                                    <a href="/Produto/Editar/@produto.Id" class="btn btn-warning">Editar</a>
+                                </td>
+                                <td>
+                                    <a href="/Produto/Excluir/@produto.Id" class="btn btn-danger">Excluir</a>
+                                </td>
+                            </tr>
+                        }
+                        <!--
+                        </><tr>
+                                                    <td>1</td>
+                                                    <td>Caminhão Rodonaves</td>
+                                                    <td>150</td>
+                                                    <td>
+                                                        <a href="/Produto/Editar/1" class="btn btn-warning">Editar</a>
+                                                        <a href="/Produto/Excluir/1" class="btn btn-danger">Excluir</a>
+                                                    </td>
+                                                </tr>
 
-                        <tr>
-                            <td>2</td>
-                            <td>Programa em C que calcula o segundo menor</td>
-                            <td>5</td>
-                            <td>
-                                <a href="/Produto/Editar/2" class="btn btn-warning">Editar</a>
-                                <a href="/Produto/Excluir/2" class="btn btn-danger">Excluir</a>
-                            </td>
-                        </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Programa em C que calcula o segundo menor</td>
+                                                    <td>5</td>
+                                                    <td>
+                                                        <a href="/Produto/Editar/2" class="btn btn-warning">Editar</a>
+                                                        <a href="/Produto/Excluir/2" class="btn btn-danger">Excluir</a>
+                                                    </td>
+                                                </tr>
 
-                        <tr>
-                            <td>3</td>
-                            <td>Boneco ET de Varginia</td>
-                            <td>87</td>
-                            <td>
-                                <a href="/Produto/Editar/3" class="btn btn-warning">Editar</a>
-                                <a href="/Produto/Excluir/3" class="btn btn-danger">Excluir</a>
-                            </td>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Boneco ET de Varginia</td>
+                                                    <td>87</td>
+                                                    <td>
+                                                        <a href="/Produto/Editar/3" class="btn btn-warning">Editar</a>
+                                                        <a href="/Produto/Excluir/3" class="btn btn-danger">Excluir</a>
+                                                    </td>
 
-                        </tr>
+                                                </tr>
+                        -->
                     </tbody>
                 </table>
             </div>
